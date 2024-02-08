@@ -11,6 +11,14 @@ export function Validate(data: User){
         erros["name"] = 'O nome é obrigatório'
     }
 
+    if(!data.email){
+        erros["email"] = 'O e-mail é obrigatório'
+    }
+
+    if(!data.agree){
+        erros["agree"] = 'Você precisa aceitar os termos.'
+    }
+
     return erros;
 
 }
